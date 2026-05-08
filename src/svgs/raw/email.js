@@ -1,0 +1,7 @@
+import createSvgFromString from "../../utils/createSvgFromString";
+
+export default createSvgFromString(`<svg class="contact__icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="fill-green stroke-green" x="0.5" y="0.5" width="47" height="47" rx="23.5" fill-opacity="0.1"/>
+                                <path class="stroke-green" d="M29 32.5H19C16 32.5 14 31 14 27.5V20.5C14 17 16 15.5 19 15.5H29C32 15.5 34 17 34 20.5V27.5C34 31 32 32.5 29 32.5Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="stroke-green" d="M29 21L25.87 23.5C24.84 24.32 23.15 24.32 22.12 23.5L19 21" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>`);

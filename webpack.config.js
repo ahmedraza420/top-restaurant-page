@@ -21,6 +21,13 @@ export default {
     module: {
         rules: [
             {
+                // this lets us import files without .js extension mentioned
+                test: /\.m?js$/,
+                resolve: {
+                    fullySpecified: false,
+                }
+            },
+            {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
@@ -32,6 +39,10 @@ export default {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
+            // {
+            //     test: /\.svg$/,
+            //     use: 'svg-url-loader'
+            // }
         ],
     },
 };
