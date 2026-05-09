@@ -1,13 +1,14 @@
+import images from "../../assets/images";
 import icons from "../../svgs/icons";
 import createElement from "../../utils/createElement";
-import brandLogo from "../../assets/brandlogo.svg";
+// import brandLogo from "../../assets/brandlogo.svg";
 
-export function createFooter (onNavigate) {
+export function createFooter (onNavigate, navElements) {
     return createElement('footer', 'section-dark', {}, [
         createElement('div', "container", {}, [
             createElement('div', "footer__content", {}, [
                 createSocialsCol(),
-                createLinksCol(onNavigate),
+                createLinksCol(onNavigate, navElements),
                 createTimingsCol(),
                 createAddressCol()
             ]),
@@ -18,30 +19,34 @@ export function createFooter (onNavigate) {
 
 function createSocialsCol () {
     return createElement('div', "footer__content__container footer__socials", {}, [
-        createElement('div', "footer__socials__logo", {}, [
-            createElement('img', "logo", {"src": brandLogo, "alt" : ""}),
-        ]),
+        createElement('div', "footer__socials__logo", {},
+            createElement('img', "logo", {"src": images.brandlogo, "alt" : ""})
+        ),
         createElement('div', "footer__socials__icons", {}, [
-            createElement('a', "footer__socials__icon", {"href": ""}, [
-                icons["instagram"]
-            ]),
-            createElement('a', "footer__socials__icon", {"href": ""}, [
-                icons["twitter"]
-            ]),
-            createElement('a', "footer__socials__icon", {"href": ""}, [
-                icons["facebook"]
-            ]),
-            createElement('a', "footer__socials__icon", {"href": ""}, [
-                icons["youtube"]
-            ]),
+            createElement('a', "footer__socials__icon", {"href": ""},
+                icons["instagram"].cloneNode(true),
+            ),
+            createElement('a', "footer__socials__icon", {"href": ""}, 
+                icons["twitter"].cloneNode(true),
+            ),
+            createElement('a', "footer__socials__icon", {"href": ""}, 
+                icons["facebook"].cloneNode(true),
+            ),
+            createElement('a', "footer__socials__icon", {"href": ""}, 
+                icons["youtube"].cloneNode(true),
+            ),
         ])
     ]);
 }
 
-function createLinksCol (onNavigate) {
+function createLinksCol (onNavigate, navElements) {
     const homeLink = createElement('a', "quick__link path__link", {"href": ""}, "Home");
     const menuLink = createElement('a', "quick__link path__link", {"href": ""}, "Menu");
     const contactLink = createElement('a', "quick__link path__link", {"href": ""}, "Contact");
+
+    navElements.home.push(homeLink);
+    navElements.menu.push(menuLink);
+    navElements.contact.push(contactLink);
 
     homeLink.addEventListener('click', () => {
         onNavigate('home');

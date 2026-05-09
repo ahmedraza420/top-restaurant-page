@@ -13,6 +13,9 @@ const routes = {
     contact: createContact,
 }
 
+const navElements =  {}
+Object.keys(routes).forEach((route => navElements[route] = []));
+
 const root = document.querySelector('#root');
 let mainContainer;
 let currentPage = "home";
@@ -20,25 +23,37 @@ let currentPage = "home";
 function renderApp() {
     root.replaceChildren();
 
-    const { layout, main } = createLayout(handleNavigation);
+    const { layout, main } = createLayout(handleNavigation, navElements);
 
     mainContainer = main;
 
     root.appendChild(layout);
+
+    updateActiveNav(currentPage);
+
     renderPage(currentPage, mainContainer);
+}
+
+function updateActiveNav (pagename) {
+    Object.entries(navElements).forEach(([page, elements]) => {
+        elements.forEach(el => {
+            el.classList.toggle('active', page === pagename)
+        });
+    })
 }
 
 function handleNavigation(pageName) {
     currentPage = pageName;
+    updateActiveNav(currentPage);
     renderPage(currentPage, mainContainer)
 }
 
-function createLayout(onNavigate) {
+function createLayout(onNavigate, navElements) {
     const layout = document.createElement('div');
 
-    const header = createNavbar(onNavigate);
+    const header = createNavbar(onNavigate, navElements);
     const main = document.createElement('main');
-    const footer = createFooter(onNavigate);
+    const footer = createFooter(onNavigate, navElements);
 
     layout.append(header, main, footer);
 
@@ -51,7 +66,7 @@ function renderPage(pageName, main) {
     const pageFunc = routes[pageName];
 
     if(!pageFunc) return;
-    const page = pageName == "menu" ? pageFunc(menuData) : pageFunc();
+    const page = pageName == "menu" ? pageFunc(menuData) : pageName == "home" ? pageFunc(handleNavigation) : pageFunc();
 
     main.appendChild(page);
 }

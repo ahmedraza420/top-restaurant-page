@@ -1,3 +1,5 @@
+import images from "../assets/images"
+
 export default [
             {
                 category: "Burgers",
@@ -5,7 +7,7 @@ export default [
                 items: [
                     {
                         name: "Make Your Own",
-                        image: "../assets/burger-1.png",
+                        image: images.burger1,
                         variants: [
                             {label: null, price: 10.90},
                         ],
@@ -14,7 +16,7 @@ export default [
                     },
                     {
                         name: "Chili Burger",
-                        image: "../assets/burger-2.png",
+                        image: images.burger2,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -23,7 +25,7 @@ export default [
                     },
                     {
                         name: "Classic Burger",
-                        image: "../assets/burger-3.png",
+                        image: images.burger3,
                         variants: [
                             {label: null, price: 10.90},
                         ],
@@ -32,7 +34,7 @@ export default [
                     },
                     {
                         name: "Cheese Burger",
-                        image: "../assets/burger-4.png",
+                        image: images.burger4,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -41,7 +43,7 @@ export default [
                     },
                     {
                         name: "Cheese & Bacon Burger",
-                        image: "../assets/burger-1.png",
+                        image: images.burger1,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -50,7 +52,7 @@ export default [
                     },
                     {
                         name: "Alpine Burger",
-                        image: "../assets/burger-2.png",
+                        image: images.burger2,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -59,7 +61,7 @@ export default [
                     },
                     {
                         name: "Arugula Burger",
-                        image: "../assets/burger-3.png",
+                        image: images.burger3,
                         variants: [
                             {label: null, price: 13.95},
                         ],
@@ -68,7 +70,7 @@ export default [
                     },
                     {
                         name: "AG Burger",
-                        image: "../assets/burger-4.png",
+                        image: images.burger4,
                         variants: [
                             {label: null, price: 15.90},
                         ],
@@ -77,7 +79,7 @@ export default [
                     },
                     {
                         name: "Goodbye Obama Burger",
-                        image: "../assets/burger-1.png",
+                        image: images.burger1,
                         variants: [
                             {label: null, price: 15.90},
                         ],
@@ -86,7 +88,7 @@ export default [
                     },
                     {
                         name: "Mozzarella Burger",
-                        image: "../assets/burger-2.png",
+                        image: images.burger2,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -95,7 +97,7 @@ export default [
                     },
                     {
                         name: "Onion Burger",
-                        image: "../assets/burger-3.png",
+                        image: images.burger3,
                         variants: [
                             {label: null, price: 11.40},
                         ],
@@ -104,7 +106,7 @@ export default [
                     },
                     {
                         name: "Avocado Burger",
-                        image: "../assets/burger-4.png",
+                        image: images.burger4,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -113,7 +115,7 @@ export default [
                     },
                     {
                         name: "Brie Burger",
-                        image: "../assets/burger-1.png",
+                        image: images.burger1,
                         variants: [
                             {label: null, price: 12.90},
                         ],
@@ -122,7 +124,7 @@ export default [
                     },
                     {
                         name: "Serrano Burger",
-                        image: "../assets/burger-2.png",
+                        image: images.burger2,
                         variants: [
                             {label: null, price: 12.90},
                         ],
@@ -131,7 +133,7 @@ export default [
                     },
                     {
                         name: "BBQ Burger",
-                        image: "../assets/burger-3.png",
+                        image: images.burger3,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -140,7 +142,7 @@ export default [
                     },
                     {
                         name: "Hawaii Burger",
-                        image: "../assets/burger-4.png",
+                        image: images.burger4,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -149,7 +151,7 @@ export default [
                     },
                     {
                         name: "New York Burger",
-                        image: "../assets/burger-1.png",
+                        image: images.burger1,
                         variants: [
                             {label: null, price: 12.40},
                         ],
@@ -158,7 +160,7 @@ export default [
                     },
                     {
                         name: "Kids' Burger Menu",
-                        image: "../assets/burger-2.png",
+                        image: images.burger2,
                         variants: [
                             {label: null, price: 8.90},
                         ],
@@ -173,7 +175,7 @@ export default [
                 items: [
                     {
                         name: "Cesar Salad",
-                        image: "../assets/salad-1.png",
+                        image: images.salad1,
                         description: "Grilled chicken breast, Parmesan cheese and croutons",
                         variants: [
                         { label: null, price: "13.90" }
@@ -182,7 +184,7 @@ export default [
                     },
                     {
                         name: "AG Salad",
-                        image: "../assets/salad-2.png",
+                        image: images.salad2,
                         description: "Grilled chicken breast and mushrooms",
                         variants: [
                         { label: null, price: "13.90" }
@@ -191,7 +193,7 @@ export default [
                     },
                     {
                         name: "Chef Salad",
-                        image: "../assets/salad-1.png",
+                        image: images.salad1,
                         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                         variants: [
                         { label: null, price: "13.90" }
@@ -200,7 +202,7 @@ export default [
                     },
                     {
                         name: "Small Salad",
-                        image: "../assets/salad-2.png",
+                        image: images.salad2,
                         description: "",
                         variants: [
                         { label: null, price: "5.90" }
@@ -209,7 +211,7 @@ export default [
                     },
                     {
                         name: "Arugula Salad",
-                        image: "../assets/salad-1.png",
+                        image: images.salad1,
                         description: "Parmesan flakes and mushrooms",
                         variants: [
                         { label: null, price: "13.90" }
@@ -218,7 +220,7 @@ export default [
                     },
                     {
                         name: "Coleslaw",
-                        image: "../assets/salad-2.png",
+                        image: images.salad2,
                         description: "",
                         variants: [
                         { label: null, price: "5.90" }
@@ -236,7 +238,7 @@ export default [
                         items: [
                             {
                                 name: "Saige Free-Range Chicken Breast",
-                                image: "../assets/fromthegrill.png",
+                                image: images.fromthegrill,
                                 description: "With garlic sour cream and grilled mushrooms, served with potato wedges and salad",
                                 variants: [
                                 { label: null, price: "17.70" }
@@ -253,7 +255,7 @@ export default [
                 items: [
                     {
                         name: "Potato Wedges",
-                        image: "../assets/fries.png",
+                        image: images.fries,
                         description: "",
                         variants: [
                         { label: null, price: "5.00" }
@@ -262,7 +264,7 @@ export default [
                     },
                     {
                         name: "French Fries",
-                        image: "../assets/fries.png",
+                        image: images.fries,
                         description: "",
                         variants: [
                         { label: null, price: "5.00" }
@@ -271,7 +273,7 @@ export default [
                     },
                     {
                         name: "Sweet Potato French Fries",
-                        image: "../assets/fries.png",
+                        image: images.fries,
                         description: "",
                         variants: [
                         { label: null, price: "6.20" }
@@ -286,7 +288,7 @@ export default [
                 items: [
                     {
                         name: "Homemade Onion Rings",
-                        image: "../assets/snack.png",
+                        image: images.snack,
                         description: "With BBQ dip",
                         variants: [
                         { label: null, price: "6.60" }
@@ -295,7 +297,7 @@ export default [
                     },
                     {
                         name: "Corn on the Cob",
-                        image: "../assets/snack.png",
+                        image: images.snack,
                         description: "With herb bread",
                         variants: [
                         { label: null, price: "5.50" }
@@ -304,7 +306,7 @@ export default [
                     },
                     {
                         name: "Jacket Potatoes",
-                        image: "../assets/snack.png",
+                        image: images.snack,
                         description: "With garlic sour cream",
                         variants: [
                         { label: "Base", price: "5.90" },
@@ -325,7 +327,7 @@ export default [
                             {
                             // name: "Fried Mars / Snickers / Bounty",
                             name: "Choice of Mars, Snickers, or Bounty",
-                            image: "../assets/dessert.png",
+                            image: images.dessert,
                             description: "",
                             variants: [
                                 { label: null, price: "5.50" }
@@ -342,7 +344,7 @@ export default [
                 items: [
                 {
                     name: "Homemade Lemonade",
-                    image: "../assets/colddrink.png",
+                    image: images.colddrink,
                     description: "Ginger-Orange / Woodruff-Lemon / Passion Fruit-Lime",
                     variants: [
                         { label: "0.3L", price: "3.90" },
@@ -352,7 +354,7 @@ export default [
                 },
                 {
                     name: "Mineral Water",
-                    image: "../assets/colddrink.png",
+                    image: images.colddrink,
                     description: "",
                     // description: "Taunus Which Classic or Natural",
                     variants: [
@@ -363,7 +365,7 @@ export default [
                 },
                 {
                     name: "Coca Cola",
-                    image: "../assets/colddrink.png",
+                    image: images.colddrink,
                     description: "Coca Cola / Light / Zero, Fanta, Sprite, Mezzo Mix",
                     variants: [
                         { label: "0.3L", price: "3.90" },
@@ -373,7 +375,7 @@ export default [
                 },
                 {
                     name: "Schweppes",
-                    image: "../assets/colddrink.png",
+                    image: images.colddrink,
                     description: "Bitter Lemon, Ginger Ale, Tonic Water",
                     variants: [
                         { label: "0.3L", price: "3.90" },
@@ -383,7 +385,7 @@ export default [
                 },
                 {
                     name: "Juices and Sprinkles",
-                    image: "../assets/colddrink.png",
+                    image: images.colddrink,
                     description: "Apple, Orange, Cherry, Banana, Passion Fruit, Pineapple",
                     variants: [
                         { label: "0.3L", price: "3.90" },
@@ -399,7 +401,7 @@ export default [
                 items: [
                     {
                         name: "Espresso / Macchiato",
-                        image: "../assets/hotdrink.png",
+                        image: images.hotdrink,
                         description: "",
                         // description: "Choice of Espresso or Macchiato",
                         variants: [
@@ -409,7 +411,7 @@ export default [
                     },
                     {
                         name: "Coffee",
-                        image: "../assets/hotdrink.png",
+                        image: images.hotdrink,
                         description: "",
                         variants: [
                             { label: null, price: "13.95" }
@@ -418,7 +420,7 @@ export default [
                     },
                     {
                         name: "Latte Macchiato",
-                        image: "../assets/hotdrink.png",
+                        image: images.hotdrink,
                         description: "",
                         variants: [
                             { label: null, price: "13.95" }
@@ -427,7 +429,7 @@ export default [
                     },
                     {
                         name: "Cappuccino",
-                        image: "../assets/hotdrink.png",
+                        image: images.hotdrink,
                         description: "",
                         variants: [
                             { label: null, price: "13.95" }
@@ -436,7 +438,7 @@ export default [
                     },
                     {
                         name: "Hot Chocolate",
-                        image: "../assets/hotdrink.png",
+                        image: images.hotdrink,
                         description: "With whipped cream",
                         variants: [
                             { label: null, price: "13.95" }
@@ -445,7 +447,7 @@ export default [
                     },
                     {
                         name: "Tea",
-                        image: "../assets/hotdrink.png",
+                        image: images.hotdrink,
                         description: "Earl Grey, Fruit Tea, Chamomile Tea, Green Tea",
                         variants: [
                             { label: null, price: "13.95" }
@@ -454,7 +456,7 @@ export default [
                     },
                     {
                         name: "Fresh Mint Tea",
-                        image: "../assets/hotdrink.png",
+                        image: images.hotdrink,
                         description: "Freshly brewed Turkish mint",
                         variants: [
                             { label: null, price: "13.95" }
@@ -469,7 +471,7 @@ export default [
                 items: [
                 {
                     name: "Mojito",
-                    image: "../assets/cocktail.png",
+                    image: images.cocktail,
                     description: "Lime, mint, brown sugar, rum, soda",
                     variants: [
                     { label: null, price: "9.90" }
@@ -478,7 +480,7 @@ export default [
                 },
                 {
                     name: "Caipirinha",
-                    image: "../assets/cocktail.png",
+                    image: images.cocktail,
                     description: "Lime, brown sugar, lime juice, cachaça",
                     variants: [
                     { label: null, price: "9.90" }
@@ -487,7 +489,7 @@ export default [
                 },
                 {
                     name: "Mai Tai",
-                    image: "../assets/cocktail.png",
+                    image: images.cocktail,
                     description: "White & brown rum, orange liqueur, lime juice, almond syrup, grenadine",
                     variants: [
                     { label: null, price: "9.90" }
@@ -496,7 +498,7 @@ export default [
                 },
                 {
                     name: "Pina Colada",
-                    image: "../assets/cocktail.png",
+                    image: images.cocktail,
                     description: "White rum, coconut cream, cream, pineapple juice",
                     variants: [
                     { label: null, price: "9.90" }
@@ -505,7 +507,7 @@ export default [
                 },
                 {
                     name: "Long Island Ice Tea",
-                    image: "../assets/cocktail.png",
+                    image: images.cocktail,
                     description: "Vodka, gin, white tequila, white rum, lemon juice, cola",
                     variants: [
                     { label: null, price: "9.90" }
@@ -523,7 +525,7 @@ export default [
                         items: [
                             {
                                 name: "Williams Pear, Raspberry Spirit",
-                                image: "../assets/spirit-1.png",
+                                image: images.spirit1,
                                 description: "",
                                 variants: [
                                     { label: null, price: "3.00" }
@@ -538,7 +540,7 @@ export default [
                         items: [
                             {
                                 name: "Jägermeister, Ramazzotti, Campari, Fernet Branca",
-                                image: "../assets/spirit-2(2).png",
+                                image: images.spirit22,
                                 description: "",
                                 variants: [
                                     { label: null, price: "3.00" }

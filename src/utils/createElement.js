@@ -4,7 +4,7 @@ export default function (element, classes = "", attrs = {}, content = []) {
     // const classNames = Array.isArray(classes) ? classes : [classes];
     // if (classNames.length > 0) el.classList.add(...classNames);
     if (classes !== "") {
-        const classNames = Array.isArray(classes) ? classes : classes.split(" ");
+        const classNames = Array.isArray(classes) ? classes : classes.trim().split(" ");
         classNames.forEach(className => el.classList.add(className));
     }
 
