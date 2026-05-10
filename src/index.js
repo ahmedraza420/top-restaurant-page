@@ -12,13 +12,25 @@ const routes = {
     menu: createMenu,
     contact: createContact,
 }
-
+const routePaths = {
+    home: '/',
+    menu: '/menu',
+    contact: '/contact',
+}
 const navElements =  {}
 Object.keys(routes).forEach((route => navElements[route] = []));
 
 const root = document.querySelector('#root');
 let mainContainer;
-let currentPage = "home";
+let currentPage = getPageFromPath(window.location.pathname);
+
+function getPageFromPath(pathname) {
+    const match = Object.entries(routePaths)
+        .find(([_, path]) => path === pathname);
+
+    return match ? match[0] : "home";
+}
+
 
 function renderApp() {
     root.replaceChildren();
@@ -44,9 +56,22 @@ function updateActiveNav (pagename) {
 
 function handleNavigation(pageName) {
     currentPage = pageName;
+    history.pushState({}, "", routePaths[pageName]);
     updateActiveNav(currentPage);
-    renderPage(currentPage, mainContainer)
+    renderPage(currentPage, mainContainer);
+    window.scrollTo(0, 0);
 }
+
+
+// for back/forward buttons of the browser
+window.addEventListener("popstate", () => {
+    currentPage = getPageFromPath(window.location.pathname);
+
+    updateActiveNav(currentPage);
+
+    renderPage(currentPage, mainContainer);
+    window.scrollTo(0, 0);
+});
 
 function createLayout(onNavigate, navElements) {
     const layout = document.createElement('div');
