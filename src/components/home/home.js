@@ -169,6 +169,7 @@ function createFeaturedSection(onNavigate) {
             createElement('h2', "featured__title", {}, "FEATURED ITEMS"), 
             createElement('p', "featured__subtitle", {}, "Homemade Burger & co"),
             createElement('div', "featured__categories", {}, [
+                createElement('div', 'indicator', {}, []),
                 ...featuredCatBtns,
 
             ]),

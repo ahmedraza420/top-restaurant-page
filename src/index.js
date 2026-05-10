@@ -13,20 +13,20 @@ const routes = {
     contact: createContact,
 }
 const routePaths = {
-    home: '/',
-    menu: '/menu',
-    contact: '/contact',
-}
+    home: "#/",
+    menu: "#/menu",
+    contact: "#/contact",
+};
 const navElements =  {}
 Object.keys(routes).forEach((route => navElements[route] = []));
 
 const root = document.querySelector('#root');
 let mainContainer;
-let currentPage = getPageFromPath(window.location.pathname);
+let currentPage = getPageFromPath(window.location.hash || "#/");
 
-function getPageFromPath(pathname) {
+function getPageFromPath(hash) {
     const match = Object.entries(routePaths)
-        .find(([_, path]) => path === pathname);
+        .find(([_, path]) => path === hash);
 
     return match ? match[0] : "home";
 }
@@ -56,7 +56,8 @@ function updateActiveNav (pagename) {
 
 function handleNavigation(pageName) {
     currentPage = pageName;
-    history.pushState({}, "", routePaths[pageName]);
+    // history.pushState({}, "", routePaths[pageName]);
+    window.location.hash = routePaths[pageName];
     updateActiveNav(currentPage);
     renderPage(currentPage, mainContainer);
     window.scrollTo(0, 0);
@@ -65,7 +66,7 @@ function handleNavigation(pageName) {
 
 // for back/forward buttons of the browser
 window.addEventListener("popstate", () => {
-    currentPage = getPageFromPath(window.location.pathname);
+    currentPage = getPageFromPath(window.location.hash || "#/");
 
     updateActiveNav(currentPage);
 

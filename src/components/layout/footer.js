@@ -48,13 +48,16 @@ function createLinksCol (onNavigate, navElements) {
     navElements.menu.push(menuLink);
     navElements.contact.push(contactLink);
 
-    homeLink.addEventListener('click', () => {
+    homeLink.addEventListener('click', (e) => {
+        e.preventDefault();
         onNavigate('home');
     });
-    menuLink.addEventListener('click', () => {
+    menuLink.addEventListener('click', (e) => {
+        e.preventDefault();
         onNavigate('menu');
     });
-    contactLink.addEventListener('click', () => {
+    contactLink.addEventListener('click', (e) => {
+        e.preventDefault();
         onNavigate('contact');
     });
 
