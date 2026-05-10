@@ -77,10 +77,10 @@ function createTimingsCol () {
     return createElement('div', "footer__content__container footer__timings", {}, [
         createElement("h3", "", {}, "OPENING HOURS"),
         createElement('div', "timings", {}, [
-            createElement('p', "timing", {}, "Monday - Tuesday 12:00 PM - 10:00 PM"),
-            createElement('p', "timing", {}, "Wednesday - Thursday 12:00 PM - 10:00 PM"),
+            createElement('p', "timing", {}, "Monday-Tuesday 12:00 PM - 10:00 PM"),
+            createElement('p', "timing", {}, "Wednesday-Thursday 12:00 PM - 10:00 PM"),
             createElement('p', "timing", {}, "Friday 12:00 PM - 10:00 PM"),
-            createElement('p', "timing", {}, "Saturday - Sunday 12:00 PM - 10:00 AM"),
+            createElement('p', "timing", {}, "Saturday-Sunday 12:00 PM - 10:00 AM"),
         ])
     ]);
 }

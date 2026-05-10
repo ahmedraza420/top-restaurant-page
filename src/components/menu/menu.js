@@ -22,7 +22,6 @@ export function createMenu (menuData) {
 }
 
 const createMenuSection1 = (menuGroup, index) => {
-    console.log({menuGroup, index});
     return createElement('div', `menu1__section before ${index % 2 == 0 ? 'section-dark' : 'section-light'}`, {}, [
         createElement('div', "container", {}, [
             createElement('h2', "menu1__title", {}, menuGroup.category),

@@ -57,7 +57,9 @@ function createHeroSection() {
             ...dots
         ]),
         createElement('div', "hero__main container", {}, [
-            createElement('h1', "hero__title", {}, "FRANKFURT'S BEST BURGER"), // Needs to be animated
+            createElement('h1', "hero__title", {}, 
+                splitText("FRANKFURT'S BEST BURGER"),
+            ), // Needs to be animated
             createElement('p', "hero__subtitle", {}, "Homemade from Bonamen"),
             createElement('button', "hero__button cto", {}, "ORDER NOW"),
         ]),
@@ -69,6 +71,18 @@ function createHeroSection() {
             createElement('img', "disc", {src: images.disc}, ""),
         ])
     ])
+}
+
+const splitText = (text, className = "letter") => {
+    let count = 0;
+    return text.split(" ").map((word, i) => createElement('span', 'word', {}, [
+        [...word].map(char => {
+            let letter = createElement('span', 'letter', {}, char);
+            letter.style.setProperty('--delay', count++)
+            return letter;
+        }),
+        
+    ]))
 }
 
 function createEstSection() {
@@ -394,10 +408,10 @@ function createLocationAndMediaSection() {
                     createElement("h3", "branch__name", {}, "FRANKFURT"),
                     createElement('p', "branch__address", {}, "Delighting the entire north of Frankfurt ever since"),
                     createElement("div", "timings", {}, [
-                        createElement("p", "timing", {}, "Monday - Tuesday 12:00 PM - 10:00 PM"),
-                        createElement("p", "timing", {}, "Wednesday - Thursday 12:00 PM - 10:00 PM"),
+                        createElement("p", "timing", {}, "Monday-Tuesday 12:00 PM - 10:00 PM"),
+                        createElement("p", "timing", {}, "Wednesday-Thursday 12:00 PM - 10:00 PM"),
                         createElement("p", "timing", {}, "Friday 12:00 PM - 10:00 PM"),
-                        createElement("p", "timing", {}, "Saturday - Sunday 12:00 PM - 10:00 AM"),
+                        createElement("p", "timing", {}, "Saturday-Sunday 12:00 PM - 10:00 AM"),
                     ])
                 ])
             ]),

@@ -167,6 +167,14 @@ src/
     git checkout main
     ```
 
-## 🧑   
+## 💢 Known Issues / Notes
 
-Built as part of The Odin Project curriculum.
+- The floating burger image in the Values section can get clipped by the paper tear effect depending on viewport size and layout conditions.
+
+- The paper tear effect used between sections is implemented using separate SVG assets. On very large screen sizes, the tears may appear slightly misaligned or visually inconsistent.
+
+- The design is not a pixel-perfect recreation of the original Figma reference. The Figma design was used mainly as inspiration, some layouts and styling decisions differ intentionally. The original design was also in another language, so parts of the text/content were translated manually. Additionally, the Contact page was designed independently and is not based on the original Figma.
+
+- The Featured Menu carousel currently has multiple known issues and edge-case bugs. It may be fully refactored in a future update.
+
+### Built as part of The Odin Project curriculum.
