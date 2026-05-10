@@ -78,6 +78,7 @@ function createLayout(onNavigate, navElements) {
 
     const header = createNavbar(onNavigate, navElements);
     const main = document.createElement('main');
+    main.setAttribute('id', 'content');
     const footer = createFooter(onNavigate, navElements);
 
     layout.append(header, main, footer);
